@@ -1,5 +1,2 @@
-let a = 5,
-    b = 4;
-console.log (a + b); 
-console.log ('hello world');
+const numberOfFilms = +prompt('how manyfilms you see?');
 
