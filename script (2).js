@@ -22,4 +22,20 @@
 Проверить, чтобы все работало без ошибок в консоли */
 
 'use strict';
+const numberOfFilms = +prompt('How many films you see?', '');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false 
+};
 
+const a = prompt('Last film what you saw?', ''),
+      b =  prompt('how do you rate the movie??', ''),
+      c =  prompt('Last film what you saw?', ''),
+      d = prompt('how do you rate the movie?', '');
+
+      personalMovieDB.movies[a] = b;
+      personalMovieDB.movies[c] = d;
+      console.log(personalMovieDB);
