@@ -8,6 +8,7 @@ for (let i = 1; i < lenght; i++) {
 }
 console.log(result);
  
+
 // for(let i=1; i <= 6; i++){
 //     console.log('*'.repeat(i)); 
 // }
