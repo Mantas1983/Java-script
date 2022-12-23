@@ -41,3 +41,11 @@
 //     }
 //     i++;
 // }
+
+// Заполните массив цифрами от 5 до 10 включительно. Помните, что элементы массива можно сформировать так же, как и обращаться к ним: arr[0]
+const arrayOFNumbers = [];
+for (let i = 5; i <= 10; i++) {
+    arrayOFNumbers[i - 5] = i;
+}
+console.log(arrayOFNumbers);
+return arrayOFNumbers;
