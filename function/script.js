@@ -1,8 +1,10 @@
-// function sayHello(name) {
-//     return 'Sveikas, ${name}';
-// }
+ function sayHello(name) {
+    return `Sveikas, ${name}!`;
+}
 
-// sayHello('Mantas');
+sayHello('Mantas');
+console.log(sayHello('Mantas'));
+
 
 
 
@@ -16,6 +18,7 @@ function returnNeighboringNumbers(num) {
 }
 
 returnNeighboringNumbers(5);
+console.log(returnNeighboringNumbers(5));
 
 
 // 3) Создайте функцию, которая будет принимать в себя 2 аргумента, оба числа. Первое число - это база, второе число - это сколько раз нужно будет повторить это число в прогрессии. (Смотри пример ниже). Функция должна возвращать строку (или число в особых случаях, о которых ниже), где эти числа идут по порядку, разделенные тремя дефисами "---". После последнего числа их не должно быть.
@@ -38,6 +41,26 @@ returnNeighboringNumbers(5);
 
 // Эта задача уже ближе к реальности, когда вам нужно учитывать и тип данных у аргументов, проверять их и продумывать логику работы внутри. Обратите внимание на прогрессию, она рассчитывается по простой формуле умножения. Если первый аргумент 5, а второй 3, то число повторяется 3 раза, каждый раз увеличиваясь на само себя. Это базовая математика, которая и нужна для работы в 95% случае на фронтенде.
 
-// function getMathResult() {
+function getMathResult(num, times) {
+    if (typeof(times) !== 'number' || times <= 0) {
+        return num;
+    }
 
-// }
+    let str = '';
+
+    for (let i = 1; i <= times; i++) {
+        if (i === times) {
+            str += `${num * i}`;
+            // Тут без черточек в конце
+        } else {
+            str += `${num * i}---`;
+            // Это тоже самое, что и
+            // str = str + num * i + "---"
+        }
+    }
+
+    return str;
+}
+
+getMathResult(10, 5);
+console.log(getMathResult(10, 5));
