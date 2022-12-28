@@ -177,4 +177,5 @@ function fibonacci (n) {
     
     return c;
   }
+  fibonacci(4);
   console.log(fibonacci(4));
