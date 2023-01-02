@@ -59,3 +59,15 @@ console.log(showProgrammingLangs(personalPlanPeter));
 
 // Заметьте, что возраст и языки подставляются автоматически из объекта, а языки всегда в верхнем регистре (большими буквами). Если данные в объекте поменяются, то и сообщение тоже изменится.
 
+function showAgeAndLangs(plan) {
+    const {age} = plan;
+    const {languages} = plan .skills;
+    let str = `Мне ${age} и я владею языками: `;
+
+    languages.forEach(function(lang) {
+        str += `${lang.toUpperCase()} `;
+    });
+
+    return str;
+}
+personalPlanPeter.showAgeAndLangs(personalPlanPeter);
